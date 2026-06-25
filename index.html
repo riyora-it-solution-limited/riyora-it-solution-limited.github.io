@@ -113,7 +113,7 @@
     }
     img { max-width: 100%; height: auto; display: block; }
     /* Portfolio image fixed preview height and smooth hover-pan */
-    .portfolio-item { height: 300px; }
+    .portfolio-item { height: 300px; cursor: pointer; }
     .portfolio-item > img {
       width: 100%;
       height: auto;
@@ -387,7 +387,7 @@
             <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
               <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
               <h3 class="mt-2 text-lg font-semibold text-white">Enterprise Website Redesign</h3>
-              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="https://hishabnama.com/" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </article>
           <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="mobile">
@@ -405,7 +405,7 @@
             <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
               <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Software</span>
               <h3 class="mt-2 text-lg font-semibold text-white">Automation Platform</h3>
-              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="https://riyad-sheikh.github.io/amore/" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </article>
           <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="design">
@@ -741,7 +741,7 @@
         let lockedAtBottom = false;
 
         const tick = () => {
-          current += (target - current) * 0.04; // easing factor (smaller = slower)
+          current += (target - current) * 0.008; // easing factor (smaller = slower)
           img.style.transform = `translateY(${Math.round(current)}px)`;
           if (Math.abs(target - current) > 0.5) {
             requestAnimationFrame(tick);
@@ -797,6 +797,17 @@
             startTick();
           }
           lockedAtBottom = false;
+        });
+
+        item.addEventListener('click', (event) => {
+          if (event.target.closest('a')) return;
+          const link = item.querySelector('a[href]');
+          if (!link) return;
+          if (link.target === '_blank') {
+            window.open(link.href, '_blank');
+          } else {
+            window.location.href = link.href;
+          }
         });
       });
       const navLinks = document.querySelectorAll('nav a, #mobileMenu a');
