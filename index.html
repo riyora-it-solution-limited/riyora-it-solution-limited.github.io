@@ -112,13 +112,23 @@
       }
     }
     img { max-width: 100%; height: auto; display: block; }
+    /* Portfolio image fixed preview height and smooth hover-pan */
+    .portfolio-item { height: 300px; }
+    .portfolio-item > img {
+      width: 100%;
+      height: auto;
+      transform: translateY(0);
+      transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1);
+      will-change: transform;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <div id="loader">
     <div class="text-center">
       <div class="spinner"></div>
-      <p class="mt-6 text-slate-200 tracking-[0.25em] uppercase text-sm">Loading Riyora</p>
+      <p class="mt-6 text-slate-200 tracking-[0.25em] uppercase text-sm">Riyora</p>
     </div>
   </div>
 
@@ -372,7 +382,7 @@
         </div>
         <div id="portfolioGrid" class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Web Development" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <img src="images/hishabnama.png" alt="Amore Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
             <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
               <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
@@ -381,7 +391,7 @@
             </div>
           </article>
           <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="mobile">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Mobile App" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <img src="images/padmashop.png" alt="Clock Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
             <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
               <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Mobile</span>
@@ -390,7 +400,7 @@
             </div>
           </article>
           <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="software">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Software" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <img src="images/amore.png" alt="Amore Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
             <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
               <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Software</span>
@@ -399,7 +409,7 @@
             </div>
           </article>
           <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="design">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="UI/UX" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <img src="images/clock.png" alt="Padma Shop Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
             <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
               <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">UI/UX</span>
@@ -408,11 +418,101 @@
             </div>
           </article>
           <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Website" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <img src="images/resturent.png" alt="Resturent Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
             <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
               <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
               <h3 class="mt-2 text-lg font-semibold text-white">Corporate Launch Platform</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/tasko.png" alt="Tasko Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">Padma Shop</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/alzaf.png" alt="Alzaf Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">Alzaf</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/aropage.png" alt="AroPage Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">AroPage</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/bdjobs.png" alt="BDJobs Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">BDJobs</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/hekto.png" alt="Hekto Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">Hekto</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/jidox.png" alt="Jidox Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">Jidox</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/onlineshop.png" alt="Online Shop Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">Online Shop</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/orebi.png" alt="Orebi Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">Orebi</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/petroil.png" alt="Petroil Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">Petroil</h3>
+              <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="portfolio-item group relative overflow-hidden rounded-2xl border border-white/10 bg-[#06172b] transition duration-500" data-category="web">
+            <img src="images/starnet.png" alt="Starnet Project" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 right-4 opacity-0 transition duration-500 group-hover:opacity-100">
+              <span class="inline-flex rounded-full bg-[#0066FF]/20 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] text-[#0066FF]">Web</span>
+              <h3 class="mt-2 text-lg font-semibold text-white">Starnet</h3>
               <a href="#contact" class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#F5B942] transition hover:text-white">View <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </article>
@@ -631,6 +731,74 @@
       const nextButton = document.getElementById('testimonialNext');
       const filters = document.querySelectorAll('.filterBtn');
       const portfolioItems = document.querySelectorAll('.portfolio-item');
+      // Smooth image pan with easing; animate only when target changes and lock at bottom
+      portfolioItems.forEach((item) => {
+        const img = item.querySelector('img');
+        if (!img) return;
+        let target = 0;
+        let current = 0;
+        let ticking = false;
+        let lockedAtBottom = false;
+
+        const tick = () => {
+          current += (target - current) * 0.04; // easing factor (smaller = slower)
+          img.style.transform = `translateY(${Math.round(current)}px)`;
+          if (Math.abs(target - current) > 0.5) {
+            requestAnimationFrame(tick);
+          } else {
+            img.style.transform = `translateY(${Math.round(target)}px)`;
+            ticking = false;
+          }
+        };
+
+        const startTick = () => {
+          if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(tick);
+          }
+        };
+
+        item.addEventListener('mousemove', (e) => {
+          const rect = item.getBoundingClientRect();
+          const relY = e.clientY - rect.top; // 0 .. height
+          const pct = Math.max(0, Math.min(1, relY / rect.height)); // clamp 0..1
+          const imgHeight = img.naturalHeight || img.clientHeight;
+          const containerHeight = rect.height;
+          if (imgHeight <= containerHeight) {
+            target = 0;
+            startTick();
+            return;
+          }
+          const maxTranslate = imgHeight - containerHeight;
+          const desired = -Math.round(maxTranslate * pct);
+
+          // If locked at bottom, ignore small further moves near bottom
+          if (lockedAtBottom) {
+            if (pct > 0.98) return; // stay locked
+            lockedAtBottom = false; // unlock when cursor moves up
+          }
+
+          if (desired <= -Math.round(maxTranslate)) {
+            target = -Math.round(maxTranslate);
+            lockedAtBottom = true;
+            startTick();
+            return;
+          }
+
+          if (desired !== target) {
+            target = desired;
+            startTick();
+          }
+        });
+
+        item.addEventListener('mouseleave', () => {
+          if (target !== 0) {
+            target = 0;
+            startTick();
+          }
+          lockedAtBottom = false;
+        });
+      });
       const navLinks = document.querySelectorAll('nav a, #mobileMenu a');
       let currentTestimonial = 0;
 
