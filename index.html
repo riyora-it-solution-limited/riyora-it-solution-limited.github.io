@@ -69,23 +69,12 @@
     #loader {
       position: fixed;
       inset: 0;
-      width: 100vw;
-      min-height: 100dvh;
       z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
+      display: grid;
+      place-items: center;
       text-align: center;
       background: #000;
       transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
-
-    #loader > div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
 
     #loader .spinner {
@@ -95,6 +84,25 @@
       border-top-color: #0066ff;
       border-radius: 9999px;
       animation: spin 1.2s linear infinite;
+    }
+
+    @media (max-width: 375px) {
+      #loader {
+        padding: 0 1rem;
+      }
+
+      #loader > div {
+        width: min(100%, 300px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #loader .spinner {
+        width: 56px;
+        height: 56px;
+      }
     }
 
     @keyframes spin {
